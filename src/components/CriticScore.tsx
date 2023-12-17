@@ -1,10 +1,10 @@
-import {Badge} from '@chakra-ui/react'
+import { Badge } from '@chakra-ui/react'
 
 type Props = {
-    score: number
-  }
+  score: number
+}
 
-const CriticScore = ({score}: Props) => {
+const CriticScore = ({ score }: Props) => {
   let color = score > 75 ? 'green' : score > 60 ? 'yellow' : ''
 
   return (
