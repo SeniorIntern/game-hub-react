@@ -39,7 +39,7 @@ dependencies:
     specifier: ^4.7.1
     version: 4.12.0(react@18.2.0)
   react-infinite-scroll-component:
-    specifier: '6.1'
+    specifier: ~6.1.0
     version: 6.1.0(react@18.2.0)
   react-router-dom:
     specifier: ^6.10.0
