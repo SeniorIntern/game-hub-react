@@ -4,11 +4,13 @@ import { Platform } from "./usePlatforms"
 import useGameQueryStore from "../store"
 
 export type Game = {
-  id: number,
-  name: string
-  background_image: string
-  parent_platforms: { platform: Platform }[]
-  metacritic: number
+  id: number;
+  name: string;
+  slug: string;
+  description_raw: string;
+  background_image: string;
+  parent_platforms: { platform: Platform }[];
+  metacritic: number;
   rating_top: number
 }
 
