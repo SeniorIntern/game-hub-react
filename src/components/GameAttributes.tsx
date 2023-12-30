@@ -1,7 +1,7 @@
 import { SimpleGrid, Text } from '@chakra-ui/react'
 import DefinationItem from '../components/DefinationItem'
 import CriticScore from '../components/CriticScore'
-import { Game } from '../hooks/entities/Game'
+import Game from '../entities/Game'
 
 type Props = {
   game: Game
