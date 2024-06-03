@@ -1,17 +1,24 @@
-import { useParams } from 'react-router-dom'
-import useGame from '../hooks/useGame'
-import { GridItem, Heading, SimpleGrid, Spinner } from '@chakra-ui/react'
-import ExpandableText from '../components/ExpandableText'
-import GameAttributes from '../components/GameAttributes'
-import GameTrailer from '../components/GameTrailer'
-import GameScreenshots from '../components/GameScreenshots'
+import {
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Spinner,
+  Stack
+} from '@chakra-ui/react';
+import { useParams } from 'react-router-dom';
+
+import ExpandableText from '../components/ExpandableText';
+import GameAttributes from '../components/GameAttributes';
+import GameScreenshots from '../components/GameScreenshots';
+import GameTrailer from '../components/GameTrailer';
+import useGame from '../hooks/useGame';
 
 const GameDetailPage = () => {
-  const { slug } = useParams()
-  const { data: game, isLoading, error } = useGame(slug!)
+  const { slug } = useParams();
+  const { data: game, isLoading, error } = useGame(slug!);
 
-  if (isLoading) return <Spinner />
-  if (error || !game) throw error
+  if (isLoading) return <Spinner />;
+  if (error || !game) throw error;
 
   return (
     <>
@@ -23,12 +30,14 @@ const GameDetailPage = () => {
         </GridItem>
 
         <GridItem>
-          <GameTrailer gameId={game.id} />
-          <GameScreenshots gameId={game.id} />
+          <Stack spacing={5}>
+            <GameTrailer gameId={game.id} />
+            <GameScreenshots gameId={game.id} />
+          </Stack>
         </GridItem>
-      </SimpleGrid >
+      </SimpleGrid>
     </>
-  )
-}
+  );
+};
 
-export default GameDetailPage
+export default GameDetailPage;

@@ -1,20 +1,20 @@
-import { Box, Heading } from '@chakra-ui/react'
-import { ReactNode } from 'react'
+import { Box, Heading } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 
 type Props = {
-  term: string,
-  children: ReactNode | ReactNode[]
-}
+  term: string;
+  children: ReactNode | ReactNode[];
+};
 
 const DefinationItem = ({ term, children }: Props) => {
   return (
     <Box marginY={5}>
-      <Heading as='dt' fontSize='md' color='gray.600'>{term}</Heading>
-      <dd>
-        {children}
-      </dd>
+      <Heading as="dt" fontSize="md" color="gray.600">
+        {term}
+      </Heading>
+      <dd>{children}</dd>
     </Box>
-  )
-}
+  );
+};
 
-export default DefinationItem
+export default DefinationItem;
